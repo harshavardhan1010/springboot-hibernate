@@ -4,6 +4,9 @@ import com.harsha.restCRUD.dao.EmployeeDAO;
 import com.harsha.restCRUD.entity.Employee;
 import com.harsha.restCRUD.service.EmployeeService;
 import com.harsha.restCRUD.service.EmployeeServiceImpl;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@Tag(name = "CRUD API's", description = "Various API's for CRUD operations")
 public class EmployeeRestController {
     private EmployeeService employeeService;
 
